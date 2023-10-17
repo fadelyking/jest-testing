@@ -40,9 +40,9 @@ export default function caesarCipher(word) {
 		const findLetter = alphabet.findIndex(
 			(alphaLetter) => letter.toLowerCase() === alphaLetter
 		);
-		if (findLetter !== -1) {
+		if (findLetter !== -1 && findLetter !== 25) {
 			updatedArr.push(alphabet[findLetter + 1]);
-		} else if (findLetter === 26) {
+		} else if (findLetter === 25) {
 			updatedArr.push("a");
 		}
 	}
